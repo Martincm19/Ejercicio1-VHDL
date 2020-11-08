@@ -1,0 +1,23 @@
+--Se describe el comportamiento de las compuertas 
+
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity Compuertas is
+
+	port
+	(
+		-- Pines de entrada
+				A,B: in  std_logic;
+		      
+		-- Output ports
+		F	: out std_logic;
+	
+	);
+end Compuertas;
+architecture dataflow of Compuertas is
+begin
+
+F <= ((A not)and B) or((B not)and A);
+
+end dataflow
